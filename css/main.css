@@ -1,0 +1,1333 @@
+@font-face {
+    font-family: "NewsGothic Bold";
+    src: url("../fonts/NewGothic/NewsGothic-Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cocogoose Pro Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cocogoose Pro Light'), url('../fonts/cocogoose/Cocogoose Pro Light Trial.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Cocogoose Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cocogoose Pro Regular'), url('../fonts/cocogoose/Cocogoose Pro Regular Trial.woff') format('woff');
+}
+
+
+/*-------------------------------- Reset */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-size: 18px;
+    font-family: "Cocogoose Pro Light";
+    overflow-x: hidden;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*-------------------------- Wrapper*/
+
+.wrapper {
+    max-width: 1155px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+/*---------------------- menu header*/
+
+.header {
+    background-color: #c69c6d;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.header .wrapper a>img {
+    left: 140px;
+    padding-top: 15px;
+}
+
+.main-menu {
+    float: right;
+    right: 145px;
+    font-size: 16px;
+}
+
+.main-menu ul>li {
+    display: inline-block;
+    padding: 50px 0px;
+}
+
+.main-menu ul>li>a {
+    padding: 48px 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* ---------------------------------Section Slider 0*/
+
+.slider-container {
+    width: 100vw;
+    height: 745px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
+
+.slider-container>ul {
+    position: relative;
+    left: 0;
+}
+
+.slider-container>ul>li {
+    margin-top: 112px;
+    width: 100vw;
+    height: 100%;
+    background-color: skyblue;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.slider-container>ul>li>img {
+    width: 100%;
+    height: 745px;
+}
+
+
+/*content slider*/
+
+.content-slider-0 {
+    color: #534741;
+    width: 65vw;
+    position: absolute;
+    top: 26%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.content-slider-0>h2 {
+    font-family: "NewsGothic Bold";
+    line-height: 75px;
+    font-size: 60px;
+    padding-bottom: 68px;
+}
+
+.content-slider-0>a {
+    color: #fff;
+    padding: 22px 60px 22px 60px;
+    border: 3px solid #fff;
+    font-size: 30px;
+    width: 48rem;
+    left: 30%;
+    margin-top: 200px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* ------------------------- bar */
+
+.pagination-wrap {
+    width: 120px;
+    height: 20px;
+    position: absolute;
+    top: 94.6%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
+
+.pagination-wrap ul {
+    width: 100%;
+}
+
+.pagination-wrap ul li {
+    display: inline-block;
+    margin: 0px 10px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+.pagination-wrap ul li.active {
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0px;
+    background-color: transparent;
+}
+
+
+/* ---------------------------------------------Animation */
+
+.slider-container>ul,
+.pagination-wrap ul li {
+    -webkit-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    -moz-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    -o-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    -ms-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+}
+
+
+/*-----------------------------------icons-media*/
+
+.media {
+    background-color: #cbbcaa;
+    width: 100%;
+    height: 540px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.media-content {
+    text-align: justify;
+    text-align-last: center;
+    float: right;
+    line-height: 140%;
+}
+
+.media-left {
+    padding-left: 18px;
+    width: 18vw;
+}
+
+.media-center {
+    width: 20vw;
+    padding-left: 20px;
+}
+
+.media-right {
+    width: 22vw;
+    padding-left: 18px;
+    padding-right: 30px;
+}
+
+.media-0 {
+    margin: 10.3% 0;
+}
+
+.media-0>img {
+    padding-top: 15%;
+}
+
+.media-content>h3 {
+    font-size: 24px;
+    padding-bottom: 8%;
+    font-family: 'Cocogoose Pro Regular';
+    color: #fff;
+}
+
+.media-content>p {
+    color: #534741;
+}
+
+
+/*---------------------- about Maddox*/
+
+.about-maddox {
+    height: 754px;
+}
+
+.about-content {
+    justify-content: space-between;
+    display: flex;
+}
+
+.about-content>h3 {
+    padding-top: 278px;
+    text-align: center;
+    line-height: 116%;
+    width: 40%;
+    font-size: 48px;
+    color: #2fa516;
+    font-family: 'Cocogoose Pro Regular';
+}
+
+.about-content>h3>nav {
+    font-family: 'Cocogoose Pro Light';
+}
+
+.about-content>p {
+    width: 79%;
+    padding-left: 50px;
+    padding-top: 157px;
+    text-align: justify;
+    line-height: 160%;
+    color: #534741;
+}
+
+
+/* ---------------------------why maddox richmond*/
+
+.why-maddox {
+    background-image: url("../images/bg-1.png");
+    width: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 880px;
+}
+
+.why-maddox .why-content {
+    float: right;
+    padding-top: 215px;
+}
+
+.why-content>h3 {
+    font-size: 48px;
+    font-family: 'Cocogoose Pro Regular';
+    color: #fff;
+    padding-bottom: 30px;
+}
+
+.why-content>h3>nav {
+    display: inline-block;
+    padding-left: 15px;
+    font-family: 'Cocogoose Pro Light';
+}
+
+.why-content>p {
+    width: 50.6vw;
+    line-height: 170%;
+    color: #fff;
+    text-align: justify;
+}
+
+
+/*--------------------------Services*/
+
+.title-h3 h3 {
+    text-align: center;
+    margin: auto 0;
+    font-size: 46px;
+    font-family: 'Cocogoose Pro Regular';
+    color: #2fa516;
+    padding: 4%;
+}
+
+.title-h3 h3>nav {
+    display: inline-block;
+    padding-left: 20px;
+    font-family: 'Cocogoose Pro Light';
+}
+
+.services {
+    display: flex;
+    width: 100%;
+    height: 742px;
+    color: #534741;
+    text-align: justify;
+    line-height: 200%;
+}
+
+.subtitle-h3 {
+    padding-top: 60px;
+    padding-left: 40px;
+    font-family: 'Cocogoose Pro Regular';
+    font-size: 30px;
+}
+
+.services-div {
+    padding-left: 40px;
+    width: 50%;
+}
+
+.services-div>p {
+    padding: 20px 120px 0px 40px;
+}
+
+.content-0 {
+    background-color: #dbcdbd;
+}
+
+.content-1 {
+    background-color: #c7b299;
+}
+
+.content-2 {
+    background-color: #ab9b88;
+}
+
+.content-3 {
+    background-color: #9f8c75;
+}
+
+.services-div b {
+    font-family: 'Cocogoose Pro Regular';
+    padding-left: 40px;
+}
+
+.services-div ul {
+    list-style: square;
+    padding-left: 60px;
+    line-height: 50px;
+}
+
+
+/*----------------------- our team*/
+
+.our-team {
+    height: 748px;
+}
+
+.slider-one {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 0 auto;
+}
+
+.slider-one>ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    list-style: none;
+}
+
+.slider-one>ul>li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 1155px;
+    height: 565px;
+    background: #ccc;
+    text-align: center;
+    line-height: 300px;
+}
+
+.our-team a.control_prev,
+.our-team a.control_next {
+    z-index: 2;
+    position: relative;
+    margin-top: 16%;
+    color: #2fa516;
+    font-size: 4vw;
+    cursor: pointer;
+}
+
+.our-team a.control_prev:hover,
+.our-team a.control_next:hover {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease;
+}
+
+.our-team a.control_prev {
+    float: left;
+    left: 6vw;
+}
+
+.our-team a.control_next {
+    float: right;
+    right: 6vw;
+}
+
+.slider_option {
+    position: relative;
+    margin: 10px auto;
+    width: 160px;
+    font-size: 18px;
+}
+
+.our-team .title-h3 h3 {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: left;
+    padding-left: 0;
+}
+
+
+/*------------------------- Contact Us*/
+
+.contact-us {
+    background-image: url("../images/bg-2.png");
+    width: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 604px;
+}
+
+.div-left {
+    padding-top: 107px;
+    float: left;
+    width: 40%;
+    color: #fff;
+}
+
+.div-left h3 {
+    font-family: 'Cocogoose Pro Regular';
+    font-size: 40px;
+}
+
+.div-left h5 {
+    font-family: sans-serif;
+    width: 650px;
+    font-size: 20px;
+}
+
+.div-left h5 i {
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+.div-left h5 nav {
+    display: inline-block;
+}
+
+.div-left p {
+    font-family: 'Cocogoose Pro Light';
+    font-size: 20px;
+    line-height: 170%;
+    padding-top: 35px;
+}
+
+.div-right {
+    padding-top: 107px;
+    float: right;
+    width: 460px;
+    color: #fff;
+}
+
+.div-right>input {
+    width: 100%;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 17px;
+}
+
+.div-right>textarea {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 25px;
+    padding: 20px 20px;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
+.btn-send {
+    font-size: 24px;
+    color: #fff;
+    border: 1px solid #fff;
+    height: 56px;
+    background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+/*------------------------ footer*/
+
+.footer-main {
+    background-color: #c69c6d;
+    color: #fff;
+    font-family: 'Cocogoose Pro Regular';
+}
+
+.footer-main .wrapper ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.6%;
+    padding-bottom: 3.6%;
+}
+
+.footer-main .wrapper ul li {
+    padding: 0 26.5px;
+}
+
+
+/*----------------------------------------Media Queries*/
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1435px) {
+    .media-content {
+        text-align: justify;
+        text-align-last: center;
+        float: right;
+        width: 100%;
+    }
+    .media-0 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+    }
+    .media-0>img {
+        padding-top: 0;
+        padding-bottom: 18%;
+        width: 140px;
+    }
+    .our-team a.control_prev,
+    .our-team a.control_next {
+        margin-top: 18%;
+    }
+    .our-team a.control_next {
+        right: 2vw;
+        z-index: 2;
+    }
+    .our-team a.control_prev {
+        left: 2vw;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .wrapper {
+        max-width: 1150px;
+    }
+    /*---------------------------Slider 0*/
+    .content-slider-0 {
+        width: 85vw;
+    }
+    .content-slider-0>h2 {
+        line-height: 60px;
+        font-size: 50px;
+        padding-bottom: 50px;
+    }
+    .slider-container {
+        height: 600px;
+    }
+    .slider-container>ul>li>img {
+        height: 600px;
+    }
+    .content-slider-0>a {
+        padding: 12px 30px 12px 30px;
+        margin-top: 200px;
+        font-size: 20px;
+    }
+    /*------------------------------Media Icons*/
+    .media {
+        height: 500px;
+    }
+    /*------------------------------about maddox*/
+    .about-maddox {
+        height: 600px;
+    }
+    .about-content {
+        justify-content: none;
+    }
+    .about-content>h3 {
+        padding-top: 178px;
+        font-size: 45px;
+        padding-left: 60px;
+    }
+    .about-content>p {
+        padding-top: 70px;
+        line-height: 140%;
+        padding-right: 60px;
+    }
+    /*why maddox*/
+    .why-maddox {
+        height: 780px;
+    }
+    .why-maddox .why-content {
+        float: right;
+        width: 60%;
+        padding-right: 150px;
+        text-align: center;
+    }
+    .why-content>p {
+        width: 700px;
+    }
+    /*----------------------------------Our Services*/
+    .title-h3 h3 {
+        padding: 2%;
+    }
+    .services-div {
+        padding-left: initial;
+        font-size: 16px;
+        line-height: 150%;
+    }
+    .services-div ul {
+        line-height: 30px;
+    }
+    .services-div>p {
+        padding: 20px 50px 0px 40px;
+    }
+    .services {
+        height: 542px;
+    }
+    /*---------------Slider One*/
+    .our-team {
+        height: 600px;
+    }
+    .our-team .title-h3 h3 {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 70px;
+    }
+    .slider-one>ul>li {
+        width: 900px;
+        height: 410px;
+    }
+    .slider-one>ul>li>img {
+        width: 1000px;
+    }
+    /*Contact Us*/
+    .contact-us {
+        height: 504px;
+    }
+    .div-right {
+        padding-top: 60px;
+        float: right;
+        width: 350px;
+        padding-right: 80px;
+    }
+    .div-right>textarea {
+        width: 330px;
+        height: 100px;
+    }
+    .btn-send {
+        font-size: 22px;
+        background-color: transparent;
+        width: 370px;
+        cursor: pointer;
+    }
+    .div-left {
+        padding-top: 60px;
+        padding-left: 30px;
+        width: 35%;
+    }
+    .div-left p {
+        padding-bottom: 80px;
+    }
+    /*-----------footer*/
+    .footer-main .wrapper ul {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    .header img {
+        left: 140px;
+        padding-top: 2px;
+        padding-left: 20px;
+        height: 65px;
+    }
+    .main-menu nav ul li a {
+        padding: 35px 15px;
+        font-size: 18px;
+    }
+    .slider-container {
+        height: 550px;
+    }
+    .slider-container>ul>li {
+        margin-top: 50px;
+    }
+    .content-slider-0>h2 {
+        line-height: 60px;
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
+    .content-slider-0>h2 {
+        line-height: 60px;
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
+    .content-slider-0>h2 {
+        line-height: 55px;
+        font-size: 40px;
+    }
+    .content-slider-0>a {
+        padding: 10px 20px 10px 20px;
+        font-size: 18px;
+    }
+    /*Media icons*/
+    .media {
+        height: 400px;
+        font-size: 15px;
+    }
+    .media-content {
+        width: initial;
+    }
+    .media-0 {
+        padding: 5px;
+    }
+    .media-0>img {
+        padding: 5px;
+        width: 100px;
+    }
+    .media-content>p {
+        color: #534741;
+    }
+    /*---about maddox*/
+    .about-content>p {
+        font-size: 15px;
+    }
+    .about-content>h3 {
+        padding-top: 160px;
+        font-size: 38px;
+        padding-left: 45px;
+    }
+    .about-maddox {
+        height: 610px;
+    }
+    /*why maddox*/
+    .why-maddox .why-content {
+        position: relative;
+        float: right;
+        padding-right: 180px;
+        font-size: 15px;
+        padding-top: 155px;
+    }
+    .why-maddox {
+        height: 680px;
+    }
+    .why-content>h3 {
+        font-size: 39px;
+    }
+    .why-content>p {
+        width: 600px;
+    }
+    /*our services*/
+    .services-div>p {
+        padding: 20px 30px 0px 30px;
+    }
+    .services-div {
+        line-height: 140%;
+    }
+    .subtitle-h3 {
+        padding-top: 30px;
+    }
+    /*the team*/
+    .our-team {
+        height: 500px;
+    }
+    .slider-one>ul>li {
+        width: 700px;
+        height: 330px;
+    }
+    .slider-one>ul>li>img {
+        width: 800px;
+    }
+    .our-team .title-h3 h3 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 115px;
+    }
+    .our-team a.control_prev,
+    .our-team a.control_next {
+        font-size: 50px;
+    }
+    /*contact us*/
+    .contact-us {
+        height: 450px;
+    }
+    .div-right {
+        padding-top: 40px;
+        width: 250px;
+    }
+    .div-right>input {
+        margin-bottom: 25px;
+        padding-left: 20px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .div-right>textarea {
+        width: 230px;
+        height: 90px;
+    }
+    .btn-send {
+        font-size: 20px;
+        width: 270px;
+    }
+    .div-left {
+        padding-left: 30px;
+        width: 50%;
+        text-align: justify;
+    }
+    .div-left p {
+        padding-bottom: 40px;
+        font-size: 18px;
+    }
+    .div-left h5 {
+        line-height: 200%;
+    }
+    .div-left h5 nav {
+        display: inherit;
+    }
+    /*footer*/
+    .footer-main {
+        font-size: 15px;
+    }
+    .footer-main .wrapper ul li img {
+        width: 120px;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        color: #fff;
+        font-size: 1rem;
+        margin: 0;
+        padding-top: 24px;
+        padding-left: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+    .menu-toggle {
+        position: absolute;
+        padding: 1em;
+        top: 1em;
+        right: .5em;
+        cursor: pointer;
+    }
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        display: block;
+        background: #EBEBD3;
+        height: 3px;
+        width: 2em;
+        border-radius: 3px;
+        -webkit-transition: all ease-in-out 350ms;
+        transition: all ease-in-out 350ms;
+    }
+    .hamburger::before {
+        -webkit-transform: translateY(-7px);
+        transform: translateY(-7px);
+    }
+    .hamburger::after {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+    .open .hamburger {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .open .hamburger::before {
+        display: none;
+    }
+    .open .hamburger::after {
+        -webkit-transform: translateY(-1px) rotate(-90deg);
+        transform: translateY(-1px) rotate(-90deg);
+    }
+    .header .wrapper nav {
+        margin: 0;
+        padding: 0;
+    }
+    .main-menu {
+        position: absolute;
+        float: right;
+        right: 0px;
+    }
+    .main-menu ul {
+        display: none;
+    }
+    .main-menu ul.opening {
+        display: block;
+        height: 30px;
+        text-align: center;
+    }
+    .main-menu ul li {
+        display: inline;
+    }
+    .main-menu ul li:last-child {
+        border-bottom: none;
+    }
+    .main-menu ul li a {
+        padding: 25px 15vw;
+        font-size: 20px;
+        text-decoration: none;
+        color: #fff;
+        background: #c69c6d;
+        display: block;
+    }
+    .main-menu a:hover,
+    .main-menu a:focus {
+        background: #C68D4D;
+    }
+    /*Slider 0*/
+    .slider-container>ul>li {
+        margin-top: 20px;
+    }
+    .content-slider-0>h2 {
+        line-height: 50px;
+        font-size: 35px;
+    }
+    .slider-container {
+        height: 550px;
+    }
+    .slider-container {
+        height: 480px;
+    }
+    .slider-container>ul>li>img {
+        height: 480px;
+    }
+    /*---Social Media*/
+    .media {
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        justify-content: start;
+    }
+    .media-0 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .media-0 {
+        padding: 15px;
+        margin-top: 30px;
+    }
+    .media-0>img {
+        width: 80px;
+        padding-top: 0px;
+        padding-bottom: 15px;
+    }
+    .media-content>h3 {
+        font-size: 20px;
+        padding-bottom: 3%;
+    }
+    /*about maddox*/
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-content>h3 {
+        padding-top: 20px;
+        font-size: 25px;
+        margin: auto;
+        width: 80%;
+    }
+    .about-content>p {
+        padding-top: 20px;
+        width: 90%;
+        padding-left: 30px;
+    }
+    .about-maddox {
+        height: 560px;
+    }
+    /*-------why maddox*/
+    .why-maddox {
+        height: 580px;
+        background-size: inherit;
+    }
+    .why-content>h3 {
+        font-size: 25px;
+        width: 150%;
+    }
+    .why-maddox .why-content {
+        padding-top: 55px;
+        margin: auto;
+        float: none;
+        padding-left: 5vw;
+    }
+    .why-content>p {
+        width: 145%;
+    }
+    /*Our Services*/
+    .title-h3 h3 {
+        font-size: 35px;
+        padding-top: 20px;
+    }
+    .subtitle-h3 {
+        font-size: 18px;
+    }
+    .services-div>p {
+        line-height: 120%;
+        font-size: 14px;
+    }
+    .services-div ul {
+        line-height: 20px;
+        text-align: left;
+        font-size: 14px;
+    }
+    .services-div>p {
+        padding: 5px 20px 10px 20px;
+    }
+    /*slider one*/
+    .our-team {
+        height: 360px;
+    }
+    .slider-one>ul>li {
+        width: 450px;
+        height: 250px;
+    }
+    .slider-one>ul>li>img {
+        width: 500px;
+        height: 250px;
+    }
+    .slider-one {
+        width: 400px;
+        height: 280px;
+    }
+    .our-team .title-h3 h3 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    /*Contact us*/
+    .div-left h3 {
+        font-size: 25px;
+    }
+    .div-left p {
+        padding-bottom: 10px;
+        font-size: 14px;
+        padding-top: 15px;
+    }
+    .div-left,
+    .div-right {
+        float: initial;
+        padding-top: 15px;
+        text-align: center;
+    }
+    .div-right {
+        width: 100%;
+    }
+    .div-left {
+        width: 90%;
+    }
+    .contact-us .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .div-left h5 {
+        width: initial;
+    }
+    .div-right>input {
+        width: 70vw;
+    }
+    .div-right>textarea {
+        width: 67vw;
+    }
+    .contact-us {
+        height: 680px;
+    }
+    .btn-send {
+        font-size: 18px;
+        width: 320px;
+    }
+    .footer-main .wrapper ul {
+        display: none;
+    }
+    .contact-us {
+        height: 625px;
+    }
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+    .media-0 {
+        padding-right: 20px;
+        padding-left: 0;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .media-content {
+        padding-right: 0;
+    }
+    .about-content>h3 {
+        margin-left: 0;
+        width: 100%;
+        padding-left: 0px;
+    }
+    .about-content>p {
+        padding-left: 20px;
+    }
+    .why-content>p,
+    .about-content>p {
+        font-size: 14px;
+    }
+    .why-maddox .why-content {
+        padding-top: 25px;
+    }
+    .services {
+        display: flex;
+        height: 732px;
+        flex-direction: column;
+    }
+    .services-div {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .services .content-1 ul {
+        height: 200px;
+    }
+    .slider-one>ul>li {
+        width: 400px;
+        height: 250px;
+    }
+    .slider-one>ul>li>img {
+        width: 400px;
+        height: 250px;
+    }
+    .our-team a.control_prev,
+    .our-team a.control_next {
+        margin-top: 25%;
+    }
+    .title-h3 h3 {
+        font-size: 30px;
+    }
+    .title-h3 h3>nav {
+        padding-left: 0px;
+    }
+    .our-team .title-h3 h3 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+    }
+}
